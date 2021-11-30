@@ -1,0 +1,67 @@
+ <!DOCTYPE html>
+    <html lang="en">
+    <head>
+    <meta charset="utf-8">
+    <script src="https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js"></script>
+    <script>mermaid.initialize({ startOnLoad: true });</script>
+    <style>svg{max-width: inherit !important; min-width: 10000px;}</style>
+    </head>
+    <body>
+    <div class="mermaid">
+erDiagram
+    brief_summaries 
+browse_conditions 
+browse_interventions 
+calculated_values 
+central_contacts 
+conditions 
+countries 
+design_groups 
+design_outcomes 
+designs 
+detailed_descriptions 
+documents 
+eligibilities 
+facilities 
+id_information 
+interventions 
+ipd_information_types 
+keywords 
+links 
+mesh_headings 
+mesh_terms 
+outcomes 
+overall_officials 
+participant_flows 
+pending_results 
+provided_documents 
+reported_event_totals 
+responsible_parties 
+result_agreements 
+result_contacts 
+result_groups 
+search_results 
+sponsors 
+studies 
+study_references 
+study_searches }|..|{ result_groups : result_group_idxid 
+baseline_counts }|..|{ result_groups : result_group_idxid 
+baseline_measurements }|..|{ design_groups : design_group_idxid 
+baseline_measurements }|..|{ interventions : intervention_idxid 
+design_group_interventions }|..|{ result_groups : result_group_idxid 
+drop_withdrawals }|..|{ facilities : facility_idxid 
+facility_contacts }|..|{ facilities : facility_idxid 
+facility_investigators }|..|{ interventions : intervention_idxid 
+intervention_other_names }|..|{ result_groups : result_group_idxid 
+milestones }|..|{ outcomes : outcome_idxid 
+outcome_analyses }|..|{ outcomes : outcome_idxid 
+outcome_analyses }|..|{ result_groups : result_group_idxid 
+outcome_counts }|..|{ result_groups : result_group_idxid 
+outcome_counts }|..|{ outcomes : outcome_idxid 
+outcome_measurements }|..|{ result_groups : result_group_idxid 
+reported_events }|..|{ outcome_analyses : outcome_analysis_idxid 
+reported_events }|..|{ result_groups : result_group_idxid 
+outcome_analysis_groups 
+</div>    
+    </body>
+    </html>
