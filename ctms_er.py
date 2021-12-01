@@ -1,7 +1,13 @@
 from sqlalchemy import *
 from generate import generateHTML
 
-def ctms_er(db_string):
+
+def ctms_er():
+    import config as Config
+
+    # postgresql://<username>:<password>@<host>/<database>
+    # Getting url strings secretly.
+    db_string = Config.DB_URL
     engine = create_engine(db_string)
     with engine.connect() as conn:
 

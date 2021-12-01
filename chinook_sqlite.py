@@ -11,7 +11,7 @@ def sqlite_chinook():
         __table_args__ = {'autoload':True}
     
     session = sessionmaker(bind=sqlite_engine)()    
-    total_pages = session.query(Tracks).count()
+    total_pages = int(session.query(Tracks).count()/10)
     while True:
         
         print("Total Available pages: ", total_pages)
